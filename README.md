@@ -7,6 +7,7 @@ Anggota kelompok :
 - Montgomery Teofilus (2602189764)
 
 
+### UPDATE 1
 - CLASS DIAGRAM : https://drive.google.com/file/d/1qJC2vRuDRBbr2_P1Hp4DsyoJM8FfKn1u/view?usp=sharing
 
 
