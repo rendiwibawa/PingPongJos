@@ -7,6 +7,9 @@ Anggota kelompok :
 - Montgomery Teofilus (2602189764)
 
 
+- CLASS DIAGRAM : https://drive.google.com/file/d/1qJC2vRuDRBbr2_P1Hp4DsyoJM8FfKn1u/view?usp=sharing
+
+
 Ide Proyek: 
 Game PingPongJos, menggunakan 7 class tepat. Terdapat frame pilihan awal (main, keluar, cara bermain) pada awal nya. Terdapat 2 object pemain dan 1 object bola. 
 
