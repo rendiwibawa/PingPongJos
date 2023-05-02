@@ -38,4 +38,7 @@ public class Bola extends Rectangle{
 		g.setColor(Color.green);
 		g.fillOval(x, y, height, width);
 	}
+
+	public void setColor(Color blue) {
+	}
 }

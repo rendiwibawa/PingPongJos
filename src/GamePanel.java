@@ -31,6 +31,8 @@ public class GamePanel extends JPanel implements Runnable{
 		
 		gameThread = new Thread(this);
 		gameThread.start();
+
+		checkGameOver();
 	}
 	
 	public void newBall() {
@@ -101,12 +103,12 @@ Toolkit.getDefaultToolkit().sync();
 			balok.y = GAME_HEIGHT-PADDLE_HEIGHT;
 		
 		if(bola.x <=0) {
-			score.player2++;
+			score.player2+=10;
 			newPaddles();
 			newBall();
 		}
 		if(bola.x >= GAME_WIDTH-BALL_DIAMETER) {
-			score.player1++;
+			score.player1+=10;
 			newPaddles();
 			newBall();
 		}
@@ -124,6 +126,7 @@ Toolkit.getDefaultToolkit().sync();
 				move();
 				checkCollision();
 				repaint();
+				checkGameOver();
 				delta--;
 			}
 		}
@@ -136,6 +139,16 @@ Toolkit.getDefaultToolkit().sync();
 		public void keyReleased(KeyEvent e) {
 			balok1.keyReleased(e);
 			balok.keyReleased(e);
+		}
+	}
+
+	public void checkGameOver() {
+		if (score.player1 == 10 || score.player2 == 10) {
+			// gameStarted = false;
+			// gameOver = true;
+			// gameStatusLabel.setText("Game over! Press Space to restart the game");
+			
+			System.out.println("Player Menang");
 		}
 	}
 }
