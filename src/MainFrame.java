@@ -3,6 +3,7 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
+// Main frame ini menu utama
 
 public class MainFrame extends JFrame implements ActionListener {
     public static void main(String[] args) {
