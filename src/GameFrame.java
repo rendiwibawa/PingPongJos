@@ -12,10 +12,23 @@ public class GameFrame extends JFrame{
 		this.add(panel);
 		this.setTitle("Pong Game");
 		this.setResizable(false);
-		this.setBackground(Color.red);
-		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setBackground(Color.black);
+		this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		this.pack();
 		this.setVisible(true);
 		this.setLocationRelativeTo(null);
+
+		this.addWindowListener(new java.awt.event.WindowAdapter() {
+			@Override
+			public void windowClosing(java.awt.event.WindowEvent windowEvent) {
+				// System.out.println("close");
+				MainFrame frame = new MainFrame();
+				frame.setVisible(true);
+				// this.dispose();
+			}
+		});
 	}
+
+	
+
 }

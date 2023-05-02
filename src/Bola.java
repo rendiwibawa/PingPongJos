@@ -1,14 +1,15 @@
+
 import java.awt.*;
 import java.util.*;
 
-public class Ball extends Rectangle{
+public class Bola extends Rectangle{
 
 	Random random;
-	int xVelocity;
-	int yVelocity;
+	int KecepatanX;
+	int KecepatanY;
 	int initialSpeed = 2;
 	
-	Ball(int x, int y, int width, int height){
+	Bola(int x, int y, int width, int height){
 		super(x,y,width,height);
 		random = new Random();
 		int randomXDirection = random.nextInt(2);
@@ -24,14 +25,14 @@ public class Ball extends Rectangle{
 	}
 	
 	public void setXDirection(int randomXDirection) {
-		xVelocity = randomXDirection;
+		KecepatanX = randomXDirection;
 	}
 	public void setYDirection(int randomYDirection) {
-		yVelocity = randomYDirection;
+		KecepatanY = randomYDirection;
 	}
 	public void move() {
-		x += xVelocity;
-		y += yVelocity;
+		x += KecepatanX;
+		y += KecepatanY;
 	}
 	public void draw(Graphics g) {
 		g.setColor(Color.green);

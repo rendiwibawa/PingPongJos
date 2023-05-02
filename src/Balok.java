@@ -1,16 +1,15 @@
 
-
 import java.awt.*;
 import java.awt.event.*;
 
-public class Paddle extends Rectangle{
+public class Balok extends Rectangle{
 
 	int id;
 	int yVelocity;
 	int speed = 10;
 	
-	Paddle(int x, int y, int PADDLE_WIDTH, int PADDLE_HEIGHT, int id){
-		super(x,y,PADDLE_WIDTH,PADDLE_HEIGHT);
+	Balok(int x, int y, int BALOK_WIDTH, int BALOK_HEIGHT, int id){
+		super(x,y,BALOK_WIDTH,BALOK_HEIGHT);
 		this.id=id;
 	}
 	
@@ -64,7 +63,7 @@ public class Paddle extends Rectangle{
 		if(id==1)
 			g.setColor(Color.blue);
 		else
-			g.setColor(Color.black);
+			g.setColor(Color.red);
 		g.fillRect(x, y, width, height);
 	}
 }
