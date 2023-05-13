@@ -3,6 +3,7 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
+// Main frame ini menu utama
 
 public class MainFrame extends JFrame implements ActionListener {
     public static void main(String[] args) {
@@ -17,14 +18,14 @@ public class MainFrame extends JFrame implements ActionListener {
 
         setSize(800, 500);
 
-        ImageIcon icon = new ImageIcon("logo.png");
+        ImageIcon icon = new ImageIcon("3.png");
         setIconImage(icon.getImage());
 
         setLayout(new BorderLayout());
 
         imagePanel = new JPanel(new BorderLayout());
-        ImageIcon imageIcon = new ImageIcon("background.jpg");
-        Image image = imageIcon.getImage().getScaledInstance(800, 500, Image.SCALE_SMOOTH);
+        ImageIcon imageIcon = new ImageIcon("3.png");
+        Image image = imageIcon.getImage().getScaledInstance(800, 300, Image.SCALE_SMOOTH);
         imageIcon = new ImageIcon(image);
         JLabel imageLabel = new JLabel(imageIcon);
         imagePanel.add(imageLabel);
@@ -101,7 +102,7 @@ public class MainFrame extends JFrame implements ActionListener {
             mainPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
     
             // Add image to label
-            ImageIcon icon = new ImageIcon("tutorial.png");
+            ImageIcon icon = new ImageIcon("2.png");
             JLabel imageLabel = new JLabel(icon);
             mainPanel.add(imageLabel, BorderLayout.CENTER);
     
