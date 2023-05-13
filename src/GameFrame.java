@@ -1,5 +1,3 @@
-
-
 import java.awt.*;
 import javax.swing.*;
 
@@ -18,13 +16,16 @@ public class GameFrame extends JFrame{
 		this.setVisible(true);
 		this.setLocationRelativeTo(null);
 
+		// this.pack();
+		// this.setVisible(true);
+		// this.setLocationRelativeTo(null);
+
+
 		this.addWindowListener(new java.awt.event.WindowAdapter() {
 			@Override
 			public void windowClosing(java.awt.event.WindowEvent windowEvent) {
-				// System.out.println("close");
 				MainFrame frame = new MainFrame();
 				frame.setVisible(true);
-				// this.dispose();
 			}
 		});
 	}

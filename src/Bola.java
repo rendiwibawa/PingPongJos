@@ -35,7 +35,7 @@ public class Bola extends Rectangle{
 		y += KecepatanY;
 	}
 	public void draw(Graphics g) {
-		g.setColor(Color.green);
+		g.setColor(Color.black);
 		g.fillOval(x, y, height, width);
 	}
 }

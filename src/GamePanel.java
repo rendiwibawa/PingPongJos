@@ -70,6 +70,7 @@ Toolkit.getDefaultToolkit().sync();
 			bola.setYDirection(-bola.KecepatanY);
 		}
 		
+		// Kecepatan selalu bertambah saat bola masih belum hit the wall
 		if(bola.intersects(balok1)) {
 			bola.KecepatanX = Math.abs(bola.KecepatanX);
 			bola.KecepatanX++;
@@ -116,6 +117,8 @@ Toolkit.getDefaultToolkit().sync();
 		double amountOfTicks =60.0;
 		double ns = 1000000000 / amountOfTicks;
 		double delta = 0;
+		// double ns = 10000 / amountOfTicks;
+		// double delta = 10;
 		while(true) {
 			long now = System.nanoTime();
 			delta += (now -lastTime)/ns;

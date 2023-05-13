@@ -31,6 +31,13 @@ public class Balok extends Rectangle{
 				setYDirection(speed);
 			}
 			break;
+
+			// if(e.getKeyCode()==KeyEvent) {
+			// 	setYDirection();
+			// }
+			// if(e.getKeyCode()==KeyEvent.VK_DOWN) {
+			// }
+			// break;
 		}
 	}
 	public void keyReleased(KeyEvent e) {
