@@ -1,4 +1,9 @@
 
+<<<<<<< Updated upstream:src/Balok.java
+=======
+
+
+>>>>>>> Stashed changes:src/Paddle.java
 import java.awt.*;
 import java.awt.event.*;
 
