@@ -9,9 +9,9 @@ public class GamePanel extends JPanel implements Runnable {
 	static final int GAME_WIDTH = 1000;
 	static final int GAME_HEIGHT = (int) (GAME_WIDTH * (0.5555));
 	static final Dimension SCREEN_SIZE = new Dimension(GAME_WIDTH, GAME_HEIGHT);
-	static final int BALL_DIAMETER = 50;
-	static final int PADDLE_WIDTH = 15;
-	static final int PADDLE_HEIGHT = 150;
+	static final int BALL_DIAMETER = 30;
+	static final int PADDLE_WIDTH = 20;
+	static final int PADDLE_HEIGHT = 100;
 	Thread gameThread;
 	Image image;
 	Graphics graphics;
@@ -31,8 +31,6 @@ public class GamePanel extends JPanel implements Runnable {
 
 		gameThread = new Thread(this);
 		gameThread.start();
-
-		// checkGameOver();
 	}
 
 	public void newBall() {

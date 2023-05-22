@@ -1,5 +1,3 @@
-
-
 import java.awt.*;
 import javax.swing.*;
 
@@ -12,10 +10,7 @@ public class GameFrame extends JFrame{
 		this.add(panel);
 		this.setTitle("Pong Game");
 		this.setResizable(false);
-		this.setBackground(Color.DARK_GRAY);
-		ImageIcon imageIcon = new ImageIcon("1.png");
-        // Image image = imageIcon.getImage().getScaledInstance(800, 300, Image.SCALE_SMOOTH);
-		// this.back;
+		this.setBackground(new Color(0, 102, 0));
 		this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		this.pack();
 		this.setVisible(true);
