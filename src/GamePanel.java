@@ -107,12 +107,12 @@ public class GamePanel extends JPanel implements Runnable {
 			balok.y = GAME_HEIGHT - PADDLE_HEIGHT;
 
 		if (bola.x <= 0) {
-			score.player2 += 10;
+			score.player2 += 1;
 			newPaddles();
 			newBall();
 		}
 		if (bola.x >= GAME_WIDTH - BALL_DIAMETER) {
-			score.player1 += 10;
+			score.player1 += 1;
 			newPaddles();
 			newBall();
 		}
