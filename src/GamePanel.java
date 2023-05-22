@@ -28,7 +28,7 @@ public class GamePanel extends JPanel implements Runnable {
 		this.setFocusable(true);
 		this.addKeyListener(new AL());
 		this.setPreferredSize(SCREEN_SIZE);
-
+		
 		gameThread = new Thread(this);
 		gameThread.start();
 	}
@@ -88,9 +88,9 @@ public class GamePanel extends JPanel implements Runnable {
 		}
 		if (bola.intersects(balok)) {
 			bola.KecepatanX = Math.abs(bola.KecepatanX);
-			bola.KecepatanX += 0.5;
+			bola.KecepatanX += 1;
 			if (bola.KecepatanY > 0)
-				bola.KecepatanY += 0.5;
+				bola.KecepatanY += 1;
 			else
 				bola.KecepatanY--;
 			bola.setXDirection(-bola.KecepatanX);
