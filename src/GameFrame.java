@@ -1,3 +1,5 @@
+
+
 import java.awt.*;
 import javax.swing.*;
 
@@ -10,7 +12,7 @@ public class GameFrame extends JFrame{
 		this.add(panel);
 		this.setTitle("Pong Game");
 		this.setResizable(false);
-		this.setBackground(Color.BLACK);
+		this.setBackground(Color.DARK_GRAY);
 		ImageIcon imageIcon = new ImageIcon("1.png");
         // Image image = imageIcon.getImage().getScaledInstance(800, 300, Image.SCALE_SMOOTH);
 		// this.back;
@@ -19,16 +21,13 @@ public class GameFrame extends JFrame{
 		this.setVisible(true);
 		this.setLocationRelativeTo(null);
 
-		// this.pack();
-		// this.setVisible(true);
-		// this.setLocationRelativeTo(null);
-
-
 		this.addWindowListener(new java.awt.event.WindowAdapter() {
 			@Override
 			public void windowClosing(java.awt.event.WindowEvent windowEvent) {
+				// System.out.println("close");
 				MainFrame frame = new MainFrame();
 				frame.setVisible(true);
+				// this.dispose();
 			}
 		});
 	}

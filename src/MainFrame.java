@@ -72,7 +72,7 @@ public class MainFrame extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == playButton) {
             GameFrame game = new GameFrame();
-            this.setVisible(false);
+             this.setVisible(false);
         } else if (e.getSource() == tutorialButton) {
             Tutorial game = new Tutorial();
             // this.setVisible(false);
@@ -95,6 +95,8 @@ public class MainFrame extends JFrame implements ActionListener {
             // Set window properties
             setSize(800, 500);
             setLocationRelativeTo(null);
+            // setSize(800, 500);
+            // setLocationRelativeTo(null);
             setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     
             // Create main panel
