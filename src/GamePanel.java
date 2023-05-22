@@ -32,7 +32,7 @@ public class GamePanel extends JPanel implements Runnable {
 		gameThread = new Thread(this);
 		gameThread.start();
 
-		checkGameOver();
+		// checkGameOver();
 	}
 
 	public void newBall() {
@@ -151,71 +151,77 @@ public class GamePanel extends JPanel implements Runnable {
 		}
 	}
 
-	public void checkGameOver() {
-		gameThread.interrupt(); // menghentikan permainan
-		if (score.player1 >= 10) {
-			JOptionPane.showMessageDialog(this, "Player 1 wins!", "Game Over",
-					JOptionPane.INFORMATION_MESSAGE);
-					
-			int result = JOptionPane.showConfirmDialog(this,
-					"Game over! Do you want to restart the game?", "Game Over",
-					JOptionPane.YES_NO_OPTION);
-			if (result == JOptionPane.YES_OPTION) { // jika memilih "Yes", restart permainan
-				score.player1 = 0;
-				score.player2 = 0;
-				newPaddles();
-				newBall();
-				gameThread = new Thread(this);
-				gameThread.start();
-			} else { // jika memilih "No", keluar dari permainan
-				System.exit(0);
-			}
-
-		} else if (score.player2 >= 10) {
-			JOptionPane.showMessageDialog(this, "Player 2 wins!", "Game Over",
-					JOptionPane.INFORMATION_MESSAGE);
-
-			int result = JOptionPane.showConfirmDialog(this,
-					"Game over! Do you want to restart the game?", "Game Over",
-					JOptionPane.YES_NO_OPTION);
-
-			if (result == JOptionPane.YES_OPTION) { // jika memilih "Yes", restart permainan
-
-				score.player1 = 0;
-				score.player2 = 0;
-				newPaddles();
-				newBall();
-				gameThread = new Thread(this);
-				gameThread.start();
-			} else { // jika memilih "No", keluar dari permainan
-				System.exit(0);
-			}
-		}
-		// if (score.player1 == 10 || score.player2 == 10) {
-
-		// }
-	}
-
 	// public void checkGameOver() {
-	// if (score.player1 == 10 || score.player2 == 10) {
-	// int option = JOptionPane.showOptionDialog(
-	// null,
-	// "Game over! Do you want to restart the game or exit?",
-	// "Game Over",
-	// JOptionPane.YES_NO_OPTION,
-	// JOptionPane.INFORMATION_MESSAGE,
-	// null,
-	// new String[] { "Restart", "Exit" },
-	// null);
-	// if (option == JOptionPane.YES_OPTION) {
+	// gameThread.interrupt(); // menghentikan permainan
+	// if (score.player1 >= 10) {
+	// JOptionPane.showMessageDialog(this, "Player 1 wins!", "Game Over",
+	// JOptionPane.INFORMATION_MESSAGE);
+
+	// int result = JOptionPane.showConfirmDialog(this,
+	// "Game over! Do you want to restart the game?", "Game Over",
+	// JOptionPane.YES_NO_OPTION);
+	// // gameThread.stop();
+	// if (result == JOptionPane.YES_OPTION) { // jika memilih "Yes", restart
+	// permainan
 	// score.player1 = 0;
 	// score.player2 = 0;
 	// newPaddles();
 	// newBall();
-	// } else {
+	// gameThread = new Thread(this);
+	// gameThread.start();
+	// return;
+	// } else { // jika memilih "No", keluar dari permainan
 	// System.exit(0);
 	// }
+	// return;
+	// } else if (score.player2 >= 10) {
+	// JOptionPane.showMessageDialog(this, "Player 2 wins!", "Game Over",
+	// JOptionPane.INFORMATION_MESSAGE);
+
+	// int result = JOptionPane.showConfirmDialog(this,
+	// "Game over! Do you want to restart the game?", "Game Over",
+	// JOptionPane.YES_NO_OPTION);
+	// // gameThread.stop();
+	// if (result == JOptionPane.YES_OPTION) { // jika memilih "Yes", restart
+	// permainan
+	// score.player1 = 0;
+	// score.player2 = 0;
+	// newPaddles();
+	// newBall();
+	// gameThread = new Thread(this);
+	// gameThread.start();
+
+	// return;
+	// } else { // jika memilih "No", keluar dari permainan
+	// System.exit(0);
 	// }
+
 	// }
+	// // if (score.player1 == 10 || score.player2 == 10) {
+
+	// // }
+	// }
+
+	public void checkGameOver() {
+		if (score.player1 == 10 || score.player2 == 10) {
+			int option = JOptionPane.showOptionDialog(
+					null,
+					"Game over! Do you want to restart the game or exit?",
+					"Game Over",
+					JOptionPane.YES_NO_OPTION,
+					JOptionPane.INFORMATION_MESSAGE,
+					null,
+					new String[] { "Restart", "Exit" },
+					null);
+			if (option == JOptionPane.YES_OPTION) {
+				score.player1 = 0;
+				score.player2 = 0;
+				newPaddles();
+				newBall();
+			} else {
+				System.exit(0);
+			}
+		}
+	}
 
 }
